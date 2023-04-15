@@ -33,6 +33,38 @@ async function updatePassword(userID, password)
 
 }
 
+async function data(userId)
+{
+    const data = await userModel.findById(userId, "email name createdAt").exec();
+
+    if(!data) return null;
+    
+    return {
+        email: data.email,
+        name: data.name,
+        createdAt: data.createdAt
+    };
+}
+
+async function del(userId, password)
+{
+    const passwordDb = await getPassword(userId);
+
+    if(!passwordDb)
+    throw new Error("User not found");
+
+    if(!comparePassword(password, passwordDb))
+    throw new Error("Invalid password");
+
+    try {
+        userModel.findByIdAndDelete(userId).exec();
+    } catch (error) {
+        throw error;
+    }
+}
+
 export default { 
-    updatePassword 
+    updatePassword ,
+    data,
+    del
 };
