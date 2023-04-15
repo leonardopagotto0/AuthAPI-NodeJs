@@ -1,4 +1,4 @@
-import { generateToken, verifyToken } from '../Services/TokenService.js';
+import { generateToken, verifyToken } from '../Services/tokenService.js';
 
 async function validateToken(req, res, next)
 {
