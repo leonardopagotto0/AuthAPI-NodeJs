@@ -23,8 +23,6 @@ E pronto, agora basta rodar a API com um dos seguintes comandos no console:
 ```console
     node ./server.js
 ```
-<center> ou </center>
-<br>
 
 ```console
     npm start
