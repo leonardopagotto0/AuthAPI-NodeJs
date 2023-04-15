@@ -23,9 +23,40 @@ E pronto, agora basta rodar a API com um dos seguintes comandos no console:
 ```console
     node ./server.js
 ```
-<center> ou </center>
-<br>
 
 ```console
     npm start
+```
+
+# Endpoints
+
+``` 
+    auth/login - POST
+    auth/register - POST
+    token/validate - POST
+    account/ - GET
+    account/password - PUT
+    account/ - DELETE
+```
+
+<code>auth/login</code> request body:
+```json
+{
+    "email": "",
+    "password": ""
+}
+```
+<code>auth/register</code> request body:
+```json
+{
+    "email": "",
+    "name": "",
+    "password": ""
+}
+```
+<code>token/validate</code> request body:
+```json
+{
+    "token": ""
+}
 ```
