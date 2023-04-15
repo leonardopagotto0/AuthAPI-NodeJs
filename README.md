@@ -60,3 +60,22 @@ E pronto, agora basta rodar a API com um dos seguintes comandos no console:
     "token": ""
 }
 ```
+Para o accesso da rota <code>account/</code> é nescessario um <code>Bearer [access_token]</code> no campo <code>Authorization</code> do header:
+```json
+{
+    "Authorization": ""
+}
+```
+<code>account/password - put</code> request body:
+```json
+{
+    "currentPassword": "",
+    "newPassword": ""
+}
+```
+<code>account/ - delete</code> request body:
+```json
+{
+    "password": ""
+}
+```
